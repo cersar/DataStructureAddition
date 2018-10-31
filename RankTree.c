@@ -262,6 +262,7 @@ void RBDeleteFixup(RBTree *t, TreeNode *x, TreeNode *p) {
 					LeftRotation(t, y);
 					y = p->left;
 				}
+				y->left->color = BLACK;
 				y->color = p->color;
 				p->color = BLACK;
 				RightRotation(t, p);
